@@ -47,8 +47,6 @@ bot.on('message', message => {
                   message.react(":x:")
             }).catch(function(){
             });
-            }else {
-                return message.reply("tu n'as pas la permission")
             }
             });
         
