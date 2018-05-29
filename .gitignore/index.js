@@ -28,15 +28,9 @@ bot.on('message', message => {
   .setDescription("Voici un récap des commandes.")
   .setFooter("Crée par Sheehan")
   .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
- 
   .setTimestamp()
   .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
   .addField("*help \n *Créateur \n *Embed.")
- 
-  .addField("Inline Field", "They can also be inline.", true)
-
-  .addBlankField(true)
-  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
   message.channel.send({embed});
      }
 
