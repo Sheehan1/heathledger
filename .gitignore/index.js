@@ -33,7 +33,7 @@ bot.on('message', message => {
          .setTimestamp()
   message.channel.send({embed});
      }
-if (message.content === prefix + "Sondage") {
+if (message.content.startwith(prefix + "Sondage") {
     let args = message.content.split(" ").splice(1);
         var sond= new Discord.RichEmbed()
             .setTitle("Sondage")
