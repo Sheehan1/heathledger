@@ -31,5 +31,24 @@ bot.on('message', message => {
   .addField("*help \n *Créateur \n *Embed.")
   message.channel.send({embed});
      }
-
+     if (message.content.startsWith === (prefix + "Sondage")) {
+        if (message.author.id =="† Sheitan dieu d'la pignole†"){
+            let args = message.content.split(" ") .slice(1);
+            let thingToEcho = args.join(" ")
+            var sond = new DiscordRichEmbed()
+            .setDescription("Sondage")
+            .setField(thingToEcho, "Répondre avec :white_check_mark ou :x:")
+            .setColor(0x00AE86)
+            .setTimestamp()
+            message.guild.channels.find("name", "général").sendEmbed(sond)
+            .then(function (message){
+                  message.react(":white_check_mark: ")
+                  message.react(":x:")
+            }).catch(function(){
+            });
+            }else {
+                return message.reply("tu n'as pas la permission")
+            }
+            }
+        
 });
