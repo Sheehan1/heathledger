@@ -29,7 +29,6 @@ bot.on('message', message => {
   .setFooter("Crée par Sheehan")
   .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
   .setTimestamp()
-  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
   .addField("*help \n *Créateur \n *Embed.")
   message.channel.send({embed});
      }
