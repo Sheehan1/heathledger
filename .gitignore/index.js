@@ -33,7 +33,7 @@ bot.on('message', message => {
          .setTimestamp()
   message.channel.send({embed});
      }
-  if(message.content.startsWith("prefix + "embed")){
+  if(message.content.startsWith(prefix + "Sondage")){
         if(message.member.hasPermission("BAN_MEMBERS")) {
 			
 			let args = message.content.split(" ").slice(1);
@@ -57,3 +57,4 @@ bot.on('message', message => {
     }
   
 });
+
