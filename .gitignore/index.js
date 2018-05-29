@@ -10,7 +10,7 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
     
     if (message.content === prefix + "help") {
-        message.channel.sendMessage("Liste des commandes: \n *help \n *Créateur \n *embed \n *Sondage");
+        message.channel.sendMessage("Liste des commandes: \n *help \n *Créateur \n *embed \n *Sondage <question>");
     }
 
     if (message.content === "Salut") {
@@ -42,11 +42,14 @@ bot.on('message', message => {
 			    .setDescription('Sondage')
 				.addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
 				.setColor("0xB40404")
+				.setImage("http://www.loiso.fr/wp-content/uploads/2018/03/sondage4-300x300.jpg")
 				.setTimestamp()
+			.setFooter(`Sondage Par: ${message.author.username}`, `${message.author.avatarURL}`)
 			message.channel.sendEmbed(sond)
 			.then(function (message){
-				message.react("?")
-				message.react("?")
+				message.react("👍")
+				message.react("🤷")
+				message.react("👎")
 			}).catch(function(){
 				
 			});
