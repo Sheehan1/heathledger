@@ -24,7 +24,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle("EMBED")
             .setDescription("Ceci est un embed")
-            .addField(".help", "Page d'aide", true)            
+            .addField(".help", "Page d'aide")            
             .setColor("#0B0B61")
             .setFooter("Bon Moment parmis nous! :)")
         MessageChannel.sendMessage(embed);
