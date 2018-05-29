@@ -9,7 +9,7 @@ bot.on('ready', function () {
 bot.login("MjQzODQ5NDE5MzQxMDM3NTY5.De8TvQ.msKJeBk6yyDhhPQnbLt4D9UiE5k");
 bot.on('message', message => {
     if (message.content === prefix + "help") {
-        message.channel.sendMessage("Liste des commandes: \n -*help\n-*Créateur\n-*embed");
+        message.channel.sendMessage("Liste des commandes: \n - *help \n - *Créateur \n -*embed");
     }
 
     if (message.content === "Salut") {
