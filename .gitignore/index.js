@@ -22,13 +22,12 @@ bot.on('message', message => {
     }
     if (message.content === prefix + "embed") {
         var embed = new Discord.RichEmbed()
-            .setTitle("This is your title, it can hold 256 characters")
+            .setTitle("EMBED")
   .setAuthor("Sa majesté ", "https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
   .setColor(0x00AE86)
   .setDescription("Voici un récap des commandes.")
   .setFooter("Crée par Sheehan")
   .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
-  .setTimestamp()
   .addField("*help \n *Créateur \n *Embed.")
   message.channel.send({embed});
      }
