@@ -27,7 +27,8 @@ bot.on('message', message => {
             .addField(".help", "Page d'aide", true)            
             .setColor("0x0B0B61")
             .setFooter("Bon Moment parmis nous! :)")
-        MessageChannel.sendEmbed(embed);
+        MessageChannel.sendMessage(embed);
+        console.log("Commande Embed effectué!");
      }
 
 });
