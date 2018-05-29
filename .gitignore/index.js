@@ -18,7 +18,7 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "Créateur") {
-        message.channel.sendMessage("J'ai J'ai été créé par Majesté. ");
+        message.channel.sendMessage("J'ai été créé par Majesté. ");
     }
     if (message.content === prefix + "embed") {
         var embed = new Discord.RichEmbed()
@@ -26,7 +26,7 @@ bot.on('message', message => {
             .setDescription("Ceci est un embed")
             .addField(".help", "Page d'aide", true)
             .addField("Embed01", "Embed 01 ! :)", true)
-            .setColor("0x#000029")
+            .setColor("0x0B0B61")
             .setFooter("Bon Moment parmis nous! ")
         MessageChannel.sendEmbed(embed);
 }
