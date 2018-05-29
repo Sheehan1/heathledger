@@ -25,7 +25,7 @@ bot.on('message', message => {
             .setTitle("EMBED")
             .setDescription("Ceci est un embed")
             .addField(".help", "Page d'aide", true)            
-            .setColor("0x0B0B61")
+            .setColor("#0B0B61")
             .setFooter("Bon Moment parmis nous! :)")
         MessageChannel.sendMessage(embed);
         console.log("Commande Embed effectué!");
