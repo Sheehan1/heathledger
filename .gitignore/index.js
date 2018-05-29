@@ -9,7 +9,7 @@ bot.on('ready', function () {
 bot.login("MjQzODQ5NDE5MzQxMDM3NTY5.De8TvQ.msKJeBk6yyDhhPQnbLt4D9UiE5k");
 bot.on('message', message => {
     if (message.content === prefix + "help") {
-        message.channel.sendMessage("Liste des commandes: \n - *help \n - *Créateur \n -*embed");
+        message.channel.sendMessage("Liste des commandes: \n *help \n *Créateur \n *embed");
     }
 
     if (message.content === "Salut") {
@@ -24,11 +24,10 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle("EMBED")
             .setDescription("Ceci est un embed")
-            .addField(".help", "Page d'aide", true)
-            .addField("Embed01", "Embed 01 ! :)", true)
+            .addField(".help", "Page d'aide", true)            
             .setColor("0x0B0B61")
-            .setFooter("Bon Moment parmis nous! ")
+            .setFooter("Bon Moment parmis nous! :)")
         MessageChannel.sendEmbed(embed);
-}
+     }
 
 });
