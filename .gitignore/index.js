@@ -28,7 +28,8 @@ bot.on('message', message => {
   .setDescription("Voici un récap des commandes.")
   .setFooter("Crée par Sheehan")
   .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
-  .addField("*help \n *Créateur ","\n *Embed.")
+  .addField("*help \n *Créateur \n *Embed.","Commande de sondage en cours ..")
+         .setTimestamp()
   message.channel.send({embed});
      }
 
