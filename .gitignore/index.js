@@ -43,14 +43,14 @@ bot.on('message', message => {
 				.addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
 				.setColor("0xB40404")
 				.setTimestamp()
-			message.channel.sendEmbed(embed)
+			message.channel.sendEmbed(sond)
 			.then(function (message){
 				message.react("?")
 				message.react("?")
 			}).catch(function(){
 				
 			});
-			message.delete()
+			message.delete(500)
 		}else{
 			return message.reply("Tu n'as pas la permission.")
         }
