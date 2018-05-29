@@ -22,13 +22,22 @@ bot.on('message', message => {
     }
     if (message.content === prefix + "embed") {
         var embed = new Discord.RichEmbed()
-            .setTitle("EMBED")
-            .setDescription("Ceci est un embed")
-            .addField(".help", "Page d'aide")            
-            .setColor("#0B0B61")
-            .setFooter("Bon Moment parmis nous! :)")
-        message.channel.send({embed});
-        console.log("Commande Embed effectué!");
+            .setTitle("This is your title, it can hold 256 characters")
+  .setAuthor("Sa majesté ", "https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
+  .setColor(0x00AE86)
+  .setDescription("Voici un récap des commandes.")
+  .setFooter("Crée par Sheehan")
+  .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
+ 
+  .setTimestamp()
+  .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+  .addField("*help \n *Créateur \n *Embed.")
+ 
+  .addField("Inline Field", "They can also be inline.", true)
+
+  .addBlankField(true)
+  .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+  message.channel.send({embed});
      }
 
 });
