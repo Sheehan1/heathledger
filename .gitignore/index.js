@@ -23,12 +23,13 @@ bot.on('message', message => {
     if (message.content === prefix + "embed") {
         var embed = new Discord.RichEmbed()
             .setTitle("EMBED")
+        .setTimestamp()
   .setAuthor("Sa majesté ", "https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
   .setColor(0x00AE86)
   .setDescription("Voici un récap des commandes.")
   .setFooter("Crée par Sheehan")
   .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
-  .addField("*help \n *Créateur \n *Embed.")
+  .addField("*help \n *Créateur \n *Embed.","")
   message.channel.send({embed});
      }
      if (message.content.startsWith === (prefix + "Sondage")) {
