@@ -22,15 +22,14 @@ bot.on('message', message => {
     }
     if (message.content === prefix + "embed") {
         var embed = new Discord.RichEmbed()
-            .setTitle("EMBED")
-        
-  .setAuthor("Sa majesté ", "https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
-  .setColor(0x00AE86)
-  .setDescription("Voici un récap des commandes.")
-  .setFooter("Crée par Sheehan")
-  .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
-  .addField("*help \n *Créateur \n *Embed.","")
-   .setTimestamp()
+            .setTitle("EMBED")      
+            .setAuthor("Sa majesté ", "https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
+            .setColor(0x00AE86)
+            .setDescription("Voici un récap des commandes.")
+            .setFooter("Crée par Sheehan")
+            .setImage("https://man-man.nl/app/uploads/2017/01/Peaky-Blinders-Thomas-Shelby-MAN-MAN.jpg")
+            .addField("*help \n *Créateur \n *Embed.","")
+  
   message.channel.send({embed});
      }
      if (message.content.startsWith === (prefix + "Sondage")) {        
@@ -40,8 +39,7 @@ bot.on('message', message => {
             .setDescription("Sondage")
             .setField(thingToEcho, "Répondre avec :white_check_mark ou :x:")
             .setColor(0x00AE86)
-            .setTimestamp()
-            message.guild.channels.find("name", "Sondage").sendEmbed(sond)
+            message.guild.channels.find("name", "Sondage").sendMessage(sond)
             .then(function (message){
                   message.react(":white_check_mark:")
                   message.react(":x:")
