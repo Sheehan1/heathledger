@@ -32,19 +32,20 @@ bot.on('message', message => {
   
   message.channel.send({embed});
      }
-     if (message.content.startsWith === (prefix + "Sondage")) {        
-            let args = message.content.split(" ") .slice(1);
-            let thingToEcho = args.join(" ")
+     if (message.content.startsWith === (prefix + "Sondage")) { 
+        let question = args.slice(0).join(" ");
+        if (args.length === 0)
+        return message.reply('**Mauvais format** `*Sondage <Question>`')
+        let args = message.content.split(" ") .slice(1);
             var sond = new DiscordRichEmbed()
-            .setDescription("Sondage")
-            .setField(thingToEcho, "Répondre avec :white_check_mark ou :x:")
-            .setColor(0x00AE86)
-            message.guild.channels.find("name", "Sondage").sendMessage(sond)
-            .then(function (message){
-                  message.react(":white_check_mark:")
-                  message.react(":x:")
-            }).catch(function(){
-            });
+            .setTitle("Un sondage a commencer")
+           .setColor(0x00AE86) 
+           .setDescription(`${question}`)
+            .setFooter(`Sondage Proposée par: ${message.author.username}`,`${message.author.avatarURL}`)
+             message.channel.send({sond})          
+                  message.react('👍')
+                  .then(() => message.react('👎'))
+                  .then(() => message.react('🤷'))                 
+                  .catch(() => console.error('Emoji failed to react.'));
             }
             });
-        
