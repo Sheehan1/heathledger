@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+ 
 var prefix = ("*")
 bot.on('ready', function () {
     bot.user.setGame("Command: *help");
@@ -8,6 +9,7 @@ bot.on('ready', function () {
 
 bot.login(process.env.TOKEN);
 bot.on('message', message => {
+      const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     if (message.content === prefix + "help") {
         message.channel.sendMessage("Liste des commandes: \n *help \n *Créateur \n *embed");
     }
