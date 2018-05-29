@@ -6,7 +6,7 @@ bot.on('ready', function () {
     console.log("Je suis connecté !");
 });
 
-bot.login("MjQzODQ5NDE5MzQxMDM3NTY5.De8TvQ.msKJeBk6yyDhhPQnbLt4D9UiE5k");
+bot.login(precess.env.TOKEN);
 bot.on('message', message => {
     if (message.content === prefix + "help") {
         message.channel.sendMessage("Liste des commandes: \n *help \n *Créateur \n *embed");
