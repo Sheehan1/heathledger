@@ -50,6 +50,5 @@ bot.on('message', message => {
             }else {
                 return message.reply("tu n'as pas la permission")
             }
-            }
+            });
         
-});
