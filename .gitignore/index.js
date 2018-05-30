@@ -42,7 +42,7 @@ bot.on('message', message => {
 			message.channel.sendMessage('je suis déjà dans un channel');
 		} else {
 			message.channel.sendMessage('J\arrive').then(() => {
-				voiceChan.join().then(() => {
+				voiceChan.join().then((connection =>{ 
 					message.channel.sendMessage('Bien arrivé').catch(error => message.channel.sendMessage(error));
 				}).catch(error => message.channel.sendMessage(error));
 			}).catch(error => message.channel.sendMessage(error));
