@@ -10,7 +10,7 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
     
     if (message.content === prefix + "help") {
-        message.channel.sendMessage("Liste des commandes: \n *help \n *Créateur \n *embed \n *Sondage <question>");
+        message.channel.sendMessage("Liste des commandes: \n *help \n *Créateur \n *embed \n *Sondage <question> \n connecte \n part ");
     }
 
     if (message.content === "Salut") {
@@ -33,6 +33,32 @@ bot.on('message', message => {
          .setTimestamp()
   message.channel.send({embed});
      }
+	 if(message.content.startsWith(prefix + "connecte")){
+		 let voiceChan = message.member.voiceChannel;
+		if (!voiceChan || voiceChan.type !== 'voice') {
+			message.channel.sendMessage('No').catch(error => message.channel.sendMessage(error));
+		} else if (message.guild.voiceConnection) {
+			message.channel.sendMessage('I\'m already in a voice channel');
+		} else {
+			message.channel.sendMessage('Joining...').then(() => {
+				voiceChan.join().then(() => {
+					message.channel.sendMessage('Joined successfully.').catch(error => message.channel.sendMessage(error));
+				}).catch(error => message.channel.sendMessage(error));
+			}).catch(error => message.channel.sendMessage(error));
+		}
+	} else
+
+	if (message.content.startsWith(prefix + 'part')) {
+		let voiceChan = message.member.voiceChannel;
+		if (!voiceChan) {
+			message.channel.sendMessage('I am not in a voice channel');
+		} else {
+			message.channel.sendMessage('Leaving...').then(() => {
+				voiceChan.leave();
+			}).catch(error => message.channel.sendMessage(error));
+		}
+	}
+	
   if(message.content.startsWith(prefix + "Sondage")){
         if(message.member.hasPermission("BAN_MEMBERS")) {
 			
