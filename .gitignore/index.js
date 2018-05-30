@@ -1,7 +1,5 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-const Cleverbot = require("cleverbot-node");
-const clbot = new Cleverbot;
 var prefix = ("*")
 bot.on('ready', function () {
     bot.user.setGame("Command: *help");
@@ -60,14 +58,7 @@ bot.on('message', message => {
 			return message.reply("Tu n'as pas la permission.")
         }
     }
-   if (message.channel.type === "dm") {
-    clbot.write(message.content, (response) => {
-      message.channel.startTyping();
-      setTimeout(() => {
-        message.channel.send(response.output).catch(console.error);
-        message.channel.stopTyping();
-      }, Math.random() * (1 - 3) + 1 * 1000);
-    });
-  }
+
+  
 });
 
