@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const settings = require('./settings.json').token;
+const token = 'MjQzODQ5NDE5MzQxMDM3NTY5.De8TvQ.msKJeBk6yyDhhPQnbLt4D9UiE5k';
 const prefix = require ('./settings.json').prefix;
 const chalk = require('chalk');
 const moment = require('moment');
@@ -43,4 +44,4 @@ client.on('message', message => {
 	}
 });
 
-client.login(settings);
+client.login(token);
