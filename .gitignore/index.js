@@ -49,7 +49,7 @@ return snekfetch.get(searchUrl).then((result) => {
      searchMessage.edit('No results found!');
   });
 }
-	});	
+	}	
   if(message.content.startsWith(prefix + "Sondage")){
         if(message.member.hasPermission("BAN_MEMBERS")) {
 			
