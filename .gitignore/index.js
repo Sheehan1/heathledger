@@ -37,13 +37,13 @@ bot.on('message', message => {
 	 if(message.content.startsWith(prefix + "connecte")){
 		 let voiceChan = message.member.voiceChannel;
 		if (!voiceChan || voiceChan.type !== 'voice') {
-			message.channel.sendMessage('No').catch(error => message.channel.sendMessage(error));
+			message.channel.sendMessage('Non ta race').catch(error => message.channel.sendMessage(error));
 		} else if (message.guild.voiceConnection) {
 			message.channel.sendMessage('je suis déjà dans un channel');
 		} else {
 			message.channel.sendMessage('J\arrive').then(() => {
 				voiceChan.join().then(() => {
-					message.channel.sendMessage('Joined successfully.').catch(error => message.channel.sendMessage(error));
+					message.channel.sendMessage('Bien arrivé.').catch(error => message.channel.sendMessage(error));
 				}).catch(error => message.channel.sendMessage(error));
 			}).catch(error => message.channel.sendMessage(error));
 		}
