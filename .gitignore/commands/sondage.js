@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
     let ThingToEcho= args.slice(0).join(" ");
 
     if (args.length === 0)
-    return message.reply('**Mauvais formatt:** `!Poll <Question>`')
+    return message.reply('**Mauvais formatt:** `*Sondage<Question>`')
   
     const embed = new Discord.RichEmbed()
     .setTitle("Nouveau Sondage!")
