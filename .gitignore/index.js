@@ -1,8 +1,5 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-const cheerio = require('cheerio'),
-      snekfetch = require('snekfetch'),
-      querystring = require('querystring');
 var prefix = ("*")
 bot.on('ready', function () {
     bot.user.setGame("Command: *help");
@@ -36,20 +33,6 @@ bot.on('message', message => {
          .setTimestamp()
   message.channel.send({embed});
      }
-	if (message.content === (prefix + "google")) {
-		async function googleCommand(msg, args) {
-		 let searchMessage = await <Message>.reply('Searching... Sec.');
-   let searchUrl = `https://www.google.com/search?q=${encodeURIComponent(msg.content)}`;
-return snekfetch.get(searchUrl).then((result) => {
-	 let $ = cheerio.load(result.text);
-	let googleData = $('.r').first().find('a').first().attr('href');
-	 googleData = querystring.parse(googleData.replace('/url?', ''));
-      searchMessage.edit(`Result found!\n${googleData.q}`);
-  }).catch((err) => {
-     searchMessage.edit('No results found!');
-  });
-}
-	}	
   if(message.content.startsWith(prefix + "Sondage")){
         if(message.member.hasPermission("BAN_MEMBERS")) {
 			
