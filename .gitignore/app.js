@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const settings = require('./settings.json').token;
+const token = require('./settings.json').token;
 const prefix = require ('./settings.json').prefix;
 const chalk = require('chalk');
 const moment = require('moment');
@@ -43,6 +43,6 @@ client.on('message', message => {
 	}
 });
 
-client.login(settings);
+client.login(token);
 
 
