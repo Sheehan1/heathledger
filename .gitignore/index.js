@@ -1,12 +1,13 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+const token = require('./Token.json').token;
 var prefix = ("*")
 bot.on('ready', function () {
     bot.user.setGame("Command: *help");
     console.log("Je suis connecté !");
 });
 
-bot.login(process.env.TOKEN);
+bot.login(token);
 bot.on('message', message => {
     
     if (message.content === prefix + "help") {
