@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-const token = require('./settings.json').token;
+//const token = require('./settings.json').token;
 var prefix = ("*")
 bot.on('ready', function () {
     bot.user.setGame("Command: *help");
