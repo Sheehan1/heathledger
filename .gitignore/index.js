@@ -40,7 +40,7 @@ bot.on('message', message => {
 			let thingToEcho = args.join(" ")
 			var sond = new Discord.RichEmbed()
 			    .setDescription('Sondage')
-				.addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
+				.addField(thingToEcho, "Répondre avec :thumbsup: , :thumbsdown , :shrug:")
 				.setColor("0xB40404")
 				.setImage("http://www.loiso.fr/wp-content/uploads/2018/03/sondage4-300x300.jpg")
 				.setTimestamp()
