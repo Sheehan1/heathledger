@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const settings = require('./settings.json').token;
 const prefix = require ('./settings.json').prefix;
 const chalk = require('chalk');
-const moment = require('moment');
 require('./util/eventLoader')(client);
 
 
