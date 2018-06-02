@@ -2,10 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const settings = require('./settings.json').token;
 const prefix = require ('./settings.json').prefix;
-const chalk = require('chalk');
+//const chalk = require('chalk');
 require('./util/eventLoader')(client);
 
-
+client.login(settings);
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.on('message', message => {
@@ -42,4 +42,4 @@ client.on('message', message => {
 	}
 });
 
-client.login(settings);
+
