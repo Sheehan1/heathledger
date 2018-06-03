@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     .setFooter(`Sondage par: ${message.author.username}`, `${message.author.avatarURL}`)
     .setTimestamp()
     //message.channel.send({embed})
-   client.channels.get(451140180108115979).send({embed})
+   client.channels.get(451140180108115979).send({embed});
    .then(function( message){
          message.react('👍')
          message.react('👎')
