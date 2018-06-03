@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
         message.delete();
         message.channel.fetchMessages({
             limit: messagecount
-            message.channel.send('`messagecount` bien supprimer');
+            //message.channel.send('`messagecount` bien supprimer');
         }).then(messages => message.channel.bulkDelete(messages));
     
         if (isNaN(args[0])){
