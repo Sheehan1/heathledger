@@ -9,14 +9,14 @@ exports.run = (client, message, args) => {
     const embed = new Discord.RichEmbed()
     .setTitle("Nouveau Sondage!")
     .setColor("#5599ff")
-    .setDescription(`Sondage`)
-    .setImage("http://www.loiso.fr/wp-content/uploads/2018/03/sondage4-300x300.jpg")
+    //.setDescription(`Sondage`)
+    .setImage("http://mediateur.radiofrance.fr/wp-content/uploads/sites/43/2016/04/Sondage.jpg")
     .addField(ThingToEcho,"Répondre avec :thumbsup: ,:shrug:, :thumbsdown:")    
     .setFooter(`Sondage par: ${message.author.username}`, `${message.author.avatarURL}`)
     .setTimestamp()
-    //message.channel.send({embed})
+   
     client.channels.get('451140180108115979').send({embed})
-   //client.channels.get(451140180108115979).sendMessage({embed})
+    
    .then(function( message){
          message.react('👍')
          message.react('👎')
