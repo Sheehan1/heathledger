@@ -6,7 +6,6 @@ const prefix = require ('./settings.json').prefix;
 require('./util/eventLoader')(client);
 
 client.login(settings);
-client.user.setUsername("EFA BOT");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.on('message', message => {
