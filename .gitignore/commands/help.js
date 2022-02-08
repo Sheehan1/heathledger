@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
     .setColor("#5599ff")
     //.setDescription(`menu`)
     .setThumbnail("https://la7emeseance.files.wordpress.com/2013/04/bc4.jpg")
-    .addField("Les différentes commande disponnible pour le peuple  ","*sondage <question>.. suite à venir  ")  
+    .addField("Les différentes commande disponnible pour le peuple  ","*sondage <question>  ")  
     .addField("Commandes modération","*clear <Nombre de messages>..suite à venir")
     //.setFooter(`Sondage par: ${message.author.username}`, `${message.author.avatarURL}`)
     .setTimestamp()
